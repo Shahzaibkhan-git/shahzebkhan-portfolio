@@ -1550,13 +1550,23 @@ textarea:focus-visible {
     }
 }
 
+/* UPDATE HEADER PADDING GLOBALLY OR MOBILE ONLY? 
+   User edited global header padding previously. I will edit global.
+*/
+header {
+    padding: 5px 15px 25px 15px;
+    /* Bottom padding increased to 25px */
+    /* Bottom padding increased */
+    /* Minimal padding */
+}
+
 /* ===== MOBILE HERO OPTIMIZATION ===== */
 @media (max-width: 768px) {
     .hero {
-        margin-top: 10px;
-        gap: 30px;
+        margin-top: 35px;
+        /* Pushed down */
+        gap: 20px;
         text-align: center;
-        /* Ensure it fits nicely */
         padding-bottom: 40px;
     }
 
