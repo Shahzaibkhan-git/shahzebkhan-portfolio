@@ -280,3 +280,19 @@ const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     document.body.dataset.theme = savedTheme;
 }
+
+// ===== MOBILE MENU TOGGLE =====
+function toggleMenu() {
+    const nav = document.querySelector('.nav-center');
+    nav.classList.toggle('active');
+}
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-center a').forEach(link => {
+    link.addEventListener('click', () => {
+        const nav = document.querySelector('.nav-center');
+        if (nav.classList.contains('active')) {
+            nav.classList.remove('active');
+        }
+    });
+});
