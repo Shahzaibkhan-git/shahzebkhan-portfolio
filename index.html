@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahzeb Khan | Backend Software Engineer | Django & Python Specialist</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Backend-focused Software Engineer specializing in Django and Python. Expert in building scalable REST APIs, real-time systems, and production-ready backend architectures." />
+  <meta name="keywords"
+    content="Shahzeb Khan, Software Engineer, Backend Developer, Django, Python, REST API, PostgreSQL, Web Development, Haripur" />
+  <meta name="author" content="Shahzeb Khan" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shahzebkhan.dev/" />
+  <meta property="og:title" content="Shahzeb Khan | Backend Software Engineer" />
+  <meta property="og:description"
+    content="Backend-focused Software Engineer specializing in Django and Python. Building scalable APIs and real-time systems." />
+  <meta property="og:image" content="https://shahzebkhan.dev/img.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://shahzebkhan.dev/" />
+  <meta name="twitter:title" content="Shahzeb Khan | Backend Software Engineer" />
+  <meta name="twitter:description"
+    content="Backend-focused Software Engineer specializing in Django and Python. Building scalable APIs and real-time systems." />
+  <meta name="twitter:image" content="https://shahzebkhan.dev/img.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="script.js"></script>
+
+<body data-theme="dark">
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <div class="container">
+
+    <header>
+      <nav class="nav-center">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-btn" onclick="toggleTheme()">Theme</button>
+    </header>
+
+    <section class="section hero">
+      <div>
+        <div class="hero-intro">
+          <span>HI, I'M</span>
+        </div>
+
+        <h1 style="margin-top:12px">
+          Shahzeb Khan<br>
+          <span id="typewriter" class="type-cursor" style="font-size:32px;color:var(--accent);font-weight:400"></span>
+
+        </h1>
+
+        <p style="margin-top:24px">
+          Backend-focused software engineer specializing in Django. I build scalable APIs, real-time systems, and
+          production-ready backend architectures.
+        </p>
+
+        <div style="margin-top:34px;display:flex;gap:16px;flex-wrap:wrap">
+          <a href="#contact" class="resume-btn">Get In Touch</a>
+          <a href="#projects" class="resume-btn" style="background:none;color:var(--accent)">View My Work</a>
+        </div>
+
+        <div class="socials">
+          <a href="mailto:shahzeb.khan@inara.pk" aria-label="Gmail">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/shahzeb-khan-b35163210/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h4v1.7h.1a4.4 4.4 0 0 1 4-2.2c4.3 0 5.1 2.8 5.1 6.4V21h-4v-5.3c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z" />
+            </svg>
+          </a>
+          <a href="https://github.com/Shahzaibkhan-git" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 9.9 8.2 11.5.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.6-1.4-2-1.4-2-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12.1 12.1 0 0 0 24 12.7 12 12 0 0 0 12 .5z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-avatar">
+          <img src="img.png" alt="Shahzeb Khan">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+
+      <div class="about-grid">
+        <!-- LEFT SIDE -->
+        <div class="about-list">
+          <div class="item about-intro">
+            <strong>� Professional Summary</strong>
+            <p>
+              I am a <span class="highlight">backend-focused Software Engineer</span> with strong expertise in Django
+              and Python. I have hands-on
+              experience designing, developing, and maintaining scalable web applications and RESTful APIs. My work
+              focuses on writing clean, maintainable code, following best practices, and delivering reliable systems for
+              real-world production use.
+            </p>
+            <p>
+              I enjoy working on complex backend problems such as <span class="highlight">authentication systems</span>,
+              role-based access control,
+              real-time notifications, database optimization, and system performance improvements. I am continuously
+              learning and improving my skills to stay aligned with modern backend development standards.
+            </p>
+          </div>
+
+          <div class="about-info-cards">
+            <div class="info-card">
+              <div class="info-content">
+                <strong>Location</strong>
+                <p>Haripur, KPK, Pakistan</p>
+                <p class="info-detail">Open to remote opportunities and collaborative projects worldwide</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-content">
+                <strong>Phone</strong>
+                <p>
+                  <a href="tel:03185960739" class="info-link">
+                    0318-5960739
+                  </a>
+                </p>
+                <p class="info-detail">Available during business hours for professional discussions</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-content">
+                <strong>Email</strong>
+                <p>
+                  <a href="mailto:shahzeb.khan@inara.pk" class="info-link">
+                    shahzeb.khan@inara.pk
+                  </a>
+                </p>
+                <p class="info-detail">Best way to reach me for inquiries and opportunities</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE : TECH STACK -->
+        <div class="tech-stack">
+          <h3>⚙️ Tech Stack</h3>
+
+          <div class="stack-group">
+            <span>Backend</span>
+            <div class="stack-tags">
+              <span>Python</span>
+              <span>Django</span>
+              <span>Django REST Framework</span>
+              <span>REST APIs</span>
+              <span>Authentication</span>
+              <span>RBAC</span>
+              <span>SSE</span>
+              <span>WebSockets</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <span>Databases</span>
+            <div class="stack-tags">
+              <span>PostgreSQL</span>
+              <span>MySQL</span>
+              <span>SQLite</span>
+              <span>Redis</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <span>Tools & DevOps</span>
+            <div class="stack-tags">
+              <span>Docker</span>
+              <span>Git</span>
+              <span>Linux</span>
+              <span>Nginx</span>
+              <span>Gunicorn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+
+      <div class="experience-timeline">
+
+        <!-- Full-Time Backend Developer -->
+        <div class="experience-item">
+          <span class="timeline-dot active"></span>
+
+          <div class="experience-card">
+            <div class="experience-company">Inara Technologies</div>
+
+            <div class="experience-content">
+              <div class="experience-left">
+                <div class="experience-title-row">
+                  <h3>Backend Developer</h3>
+                  <span class="experience-badge present">Present</span>
+                </div>
+                <p class="experience-role">Full-Time • Software Engineer</p>
+
+                <ul>
+                  <li>Developing and maintaining scalable backend systems using Django and Python</li>
+                  <li>Building RESTful APIs and implementing real-time features with WebSockets and SSE</li>
+                  <li>Optimizing database queries and improving application performance</li>
+                  <li>Collaborating with cross-functional teams to deliver high-quality solutions</li>
+                  <li>Writing clean, maintainable code following industry best practices</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Probation Period -->
+          <div class="experience-item">
+            <span class="timeline-dot"></span>
+
+            <div class="experience-card">
+              <div class="experience-header-row">
+                <div class="experience-company">Inara Technologies</div>
+                <div class="experience-date-container">
+                  <span class="experience-date">Oct 2024</span>
+                  <span class="experience-date-separator">–</span>
+                  <span class="experience-date">Dec 2024</span>
+                </div>
+              </div>
+
+              <div class="experience-content">
+                <h3>Probation Period</h3>
+                <p class="experience-role">Software Engineer</p>
+
+                <ul>
+                  <li>Successfully completed probation period demonstrating strong backend development skills</li>
+                  <li>Worked independently on backend modules and feature implementations</li>
+                  <li>Optimized APIs and resolved production bugs efficiently</li>
+                  <li>Collaborated effectively with frontend and QA teams</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Internship -->
+          <div class="experience-item">
+            <span class="timeline-dot"></span>
+
+            <div class="experience-card">
+              <div class="experience-header-row">
+                <div class="experience-company">Inara Technologies</div>
+                <div class="experience-date-container">
+                  <span class="experience-date">Jul 2024</span>
+                  <span class="experience-date-separator">–</span>
+                  <span class="experience-date">Oct 2024</span>
+                </div>
+              </div>
+
+              <div class="experience-content">
+                <h3>Software Engineering Intern</h3>
+                <p class="experience-role">Internship</p>
+
+                <ul>
+                  <li>Gained hands-on experience in backend development using Django framework</li>
+                  <li>Assisted in API development and database schema design</li>
+                  <li>Learned real-world development workflows and best practices</li>
+                  <li>Contributed to team projects and code reviews</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <div class="list">
+        <div class="item">
+          <strong>Django Backend Development</strong>
+          <p>
+            Design and development of secure, scalable Django applications including REST APIs, authentication systems,
+            permissions, and admin dashboards.
+          </p>
+          <p>
+            Experience with Django REST Framework, JWT authentication, role-based access control, and API documentation.
+          </p>
+        </div>
+        <div class="item">
+          <strong>Database Design & Optimization</strong>
+          <p>
+            Strong understanding of relational databases including PostgreSQL and MySQL. Skilled in schema design,
+            indexing strategies, and query optimization.
+          </p>
+          <p>
+            Focused on data integrity, performance, and scalability for growing applications.
+          </p>
+        </div>
+        <div class="item">
+          <strong>Real-Time & Background Systems</strong>
+          <p>
+            Implementation of real-time features using WebSockets and Server-Sent Events (SSE).
+          </p>
+          <p>
+            Background task processing with Redis and Celery for notifications, emails, and long-running jobs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="list">
+        <div class="item">
+          <strong>E‑commerce Backend System</strong>
+          <p>
+            Developed a complete backend solution for an e‑commerce platform including product management, orders,
+            payments, discounts, and notifications.
+          </p>
+          <p>
+            Implemented secure authentication, role-based permissions for admins and vendors, and optimized database
+            queries for performance.
+          </p>
+        </div>
+        <div class="item">
+          <strong>Real‑Time Notification System</strong>
+          <p>
+            Built a real-time notification system for admins and users using Server-Sent Events (SSE) and WebSockets.
+          </p>
+          <p>
+            Designed for scalability with Redis and background processing to handle high traffic efficiently.
+          </p>
+        </div>
+        <div class="item">
+          <strong>Messaging Platform</strong>
+          <p>
+            Created a private messaging system supporting one-to-one communication, message history, and real-time
+            delivery.
+          </p>
+          <p>
+            Utilized Redis Pub/Sub and optimized database models for fast message retrieval.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="list">
+        <div class="item">
+          <strong>BSSE (Bachelor of Science in Software Engineering)</strong>
+          <p>University of Haripur</p>
+          <p>
+            Studied core software engineering concepts including programming fundamentals, databases, data structures,
+            algorithms, software design, and web development.
+          </p>
+          <p>
+            Gained practical experience through academic projects, teamwork, and problem-solving exercises.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact-wrapper">
+        <div class="contact-left">
+          <h3>Let’s work together!</h3>
+          <p>I’m always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+
+          <div class="contact-card">
+            <span>Email</span>
+            <p><a href="mailto:shahzeb.khan@inara.pk">shahzeb.khan@inara.pk</a></p>
+          </div>
+
+          <div class="contact-card">
+            <span>Phone</span>
+            <p><a href="tel:03185960739">0318‑5960739</a></p>
+          </div>
+
+          <div class="contact-card">
+            <span>Location</span>
+            <p>Haripur, KPK, Pakistan</p>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form class="contact-form" action="mailto:shahzeb.khan@inara.pk" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="text" name="subject" placeholder="Subject" />
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="resume-btn" style="width:100%">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Shahzeb Khan. All rights reserved.
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
