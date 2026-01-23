@@ -126,6 +126,10 @@ section {
     /* matches new header height */
 }
 
+#about {
+    padding-top: 120px;
+}
+
 @keyframes sectionBounce {
     0% {
         transform: translateY(0);
@@ -185,20 +189,47 @@ section {
 .theme-btn {
     position: absolute;
     right: 20px;
-
     background: none;
     border: 1px solid var(--accent);
     color: var(--accent);
-    padding: 6px 14px;
-    border-radius: 20px;
+    padding: 8px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 0;
     transition: background 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
 }
 
 .theme-btn:hover {
     background: var(--accent);
     color: #000;
+}
+
+.theme-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Default (Dark): Show Sun */
+.sun-icon {
+    display: block;
+}
+
+.moon-icon {
+    display: none;
+}
+
+/* Light Mode: Show Moon */
+[data-theme="light"] .sun-icon {
+    display: none;
+}
+
+[data-theme="light"] .moon-icon {
+    display: block;
 }
 
 h1 {
@@ -434,8 +465,8 @@ body[data-theme="light"] .hero-avatar::before {
 
 /* active (latest role) */
 .timeline-dot.active {
-    box-shadow: 0 0 0 8px rgba(124, 58, 237, 0.25),
-        0 0 20px rgba(124, 58, 237, 0.6);
+    box-shadow: 0 0 0 8px rgba(250, 204, 21, 0.25),
+        0 0 20px rgba(250, 204, 21, 0.6);
 }
 
 /* card */
@@ -453,27 +484,6 @@ body[data-theme="light"] .hero-avatar::before {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* text */
-.experience-date {
-    display: inline-block;
-    font-size: 13px;
-    color: var(--accent);
-    font-weight: 500;
-}
-
-.experience-date-separator {
-    display: inline;
-    color: var(--muted);
-    margin: 0 6px;
-}
-
-.experience-role {
-    color: var(--muted);
-    margin-bottom: 14px;
-    font-size: 14px;
-}
-
-/* Company Name */
 /* Company Name & Date Header */
 .experience-header-row {
     display: flex;
@@ -492,34 +502,17 @@ body[data-theme="light"] .hero-avatar::before {
     font-size: 16px;
     font-weight: 600;
     color: var(--accent);
-    margin: 0;
+}
+
+.experience-date-container {
+    text-align: right;
 }
 
 .experience-date {
     display: inline-block;
     font-size: 13px;
-    color: var(--accent);
-    font-weight: 500;
-}
-
-.experience-date-separator {
-    display: inline;
     color: var(--muted);
-    margin: 0 6px;
-}
-
-/* Experience Content */
-.experience-title-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 6px;
-}
-
-.experience-content h3 {
-    font-size: 20px;
-    margin: 0;
-    color: var(--text);
+    font-weight: 500;
 }
 
 .experience-role {
@@ -540,9 +533,9 @@ body[data-theme="light"] .hero-avatar::before {
     background: rgba(250, 204, 21, 0.15);
     color: var(--accent);
     border: 1px solid var(--accent);
-    flex-shrink: 0;
 }
 
+.experience-badge.current,
 .experience-badge.present {
     animation: pulse-badge 2s ease-in-out infinite;
 }
@@ -587,11 +580,11 @@ body[data-theme="light"] .hero-avatar::before {
     .experience-header-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 4px;
     }
 
-    .experience-title-row {
-        flex-wrap: wrap;
+    .experience-date-container {
+        text-align: left;
     }
 }
 

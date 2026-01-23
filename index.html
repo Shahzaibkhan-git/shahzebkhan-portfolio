@@ -63,7 +63,26 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="theme-btn" onclick="toggleTheme()">Theme</button>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
+        <!-- Sun Icon (switch to light) -->
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon (switch to dark) -->
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
     </header>
 
     <section class="section hero">
@@ -124,7 +143,7 @@
         <!-- LEFT SIDE -->
         <div class="about-list">
           <div class="item about-intro">
-            <strong>� Professional Summary</strong>
+            <strong> Professional Summary</strong>
             <p>
               I am a <span class="highlight">backend-focused Software Engineer</span> with strong expertise in Django
               and Python. I have hands-on
@@ -228,84 +247,81 @@
           <span class="timeline-dot active"></span>
 
           <div class="experience-card">
-            <div class="experience-company">Inara Technologies</div>
+            <div class="experience-header-row">
+              <div class="experience-company">Inara Technologies</div>
+              <div class="experience-date-container">
+                <span class="experience-date">Jan 2026 – Present</span>
+              </div>
+            </div>
 
             <div class="experience-content">
-              <div class="experience-left">
-                <div class="experience-title-row">
-                  <h3>Backend Developer</h3>
-                  <span class="experience-badge present">Present</span>
-                </div>
-                <p class="experience-role">Full-Time • Software Engineer</p>
+              <h3>Backend Developer</h3>
+              <p class="experience-role">Full-Time • Software Engineer</p>
 
-                <ul>
-                  <li>Developing and maintaining scalable backend systems using Django and Python</li>
-                  <li>Building RESTful APIs and implementing real-time features with WebSockets and SSE</li>
-                  <li>Optimizing database queries and improving application performance</li>
-                  <li>Collaborating with cross-functional teams to deliver high-quality solutions</li>
-                  <li>Writing clean, maintainable code following industry best practices</li>
-                </ul>
-              </div>
+              <ul>
+                <li>Developing and maintaining scalable backend systems using Django and Python</li>
+                <li>Building RESTful APIs and implementing real-time features with WebSockets and SSE</li>
+                <li>Optimizing database queries and improving application performance</li>
+                <li>Collaborating with cross-functional teams to deliver high-quality solutions</li>
+                <li>Writing clean, maintainable code following industry best practices</li>
+              </ul>
             </div>
           </div>
-
-          <!-- Probation Period -->
-          <div class="experience-item">
-            <span class="timeline-dot"></span>
-
-            <div class="experience-card">
-              <div class="experience-header-row">
-                <div class="experience-company">Inara Technologies</div>
-                <div class="experience-date-container">
-                  <span class="experience-date">Oct 2024</span>
-                  <span class="experience-date-separator">–</span>
-                  <span class="experience-date">Dec 2024</span>
-                </div>
-              </div>
-
-              <div class="experience-content">
-                <h3>Probation Period</h3>
-                <p class="experience-role">Software Engineer</p>
-
-                <ul>
-                  <li>Successfully completed probation period demonstrating strong backend development skills</li>
-                  <li>Worked independently on backend modules and feature implementations</li>
-                  <li>Optimized APIs and resolved production bugs efficiently</li>
-                  <li>Collaborated effectively with frontend and QA teams</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Internship -->
-          <div class="experience-item">
-            <span class="timeline-dot"></span>
-
-            <div class="experience-card">
-              <div class="experience-header-row">
-                <div class="experience-company">Inara Technologies</div>
-                <div class="experience-date-container">
-                  <span class="experience-date">Jul 2024</span>
-                  <span class="experience-date-separator">–</span>
-                  <span class="experience-date">Oct 2024</span>
-                </div>
-              </div>
-
-              <div class="experience-content">
-                <h3>Software Engineering Intern</h3>
-                <p class="experience-role">Internship</p>
-
-                <ul>
-                  <li>Gained hands-on experience in backend development using Django framework</li>
-                  <li>Assisted in API development and database schema design</li>
-                  <li>Learned real-world development workflows and best practices</li>
-                  <li>Contributed to team projects and code reviews</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
         </div>
+
+        <!-- Probation Period -->
+        <div class="experience-item">
+          <span class="timeline-dot"></span>
+
+          <div class="experience-card">
+            <div class="experience-header-row">
+              <div class="experience-company">Inara Technologies</div>
+              <div class="experience-date-container">
+                <span class="experience-date">Oct 2024 – Dec 2024</span>
+              </div>
+            </div>
+
+            <div class="experience-content">
+              <h3>Backend Developer</h3>
+              <p class="experience-role">Probation</p>
+
+              <ul>
+                <li>Successfully completed probation period demonstrating strong backend development skills</li>
+                <li>Worked independently on backend modules and feature implementations</li>
+                <li>Optimized APIs and resolved production bugs efficiently</li>
+                <li>Collaborated effectively with frontend and QA teams</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Internship -->
+        <div class="experience-item">
+          <span class="timeline-dot"></span>
+
+          <div class="experience-card">
+            <div class="experience-header-row">
+              <div class="experience-company">Inara Technologies</div>
+              <div class="experience-date-container">
+                <span class="experience-date">Jul 2024 – Oct 2024</span>
+              </div>
+            </div>
+
+            <div class="experience-content">
+              <h3>Backend Developer</h3>
+              <p class="experience-role">Internship</p>
+
+              <ul>
+                <li>Gained hands-on experience in backend development using Django framework</li>
+                <li>Assisted in API development and database schema design</li>
+                <li>Learned real-world development workflows and best practices</li>
+                <li>Contributed to team projects and code reviews</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
 
