@@ -1554,7 +1554,17 @@ textarea:focus-visible {
    User edited global header padding previously. I will edit global.
 */
 header {
-    padding: 5px 15px 25px 15px;
+    padding: 20px 30px;
+    /* Restored Desktop Padding */
+}
+
+/* ===== MOBILE HERO OPTIMIZATION ===== */
+@media (max-width: 768px) {
+    header {
+        padding: 5px 15px 25px 15px;
+        /* Mobile Padding Override */
+    }
+
     /* Bottom padding increased to 25px */
     /* Bottom padding increased */
     /* Minimal padding */
