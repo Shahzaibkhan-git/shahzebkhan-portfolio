@@ -1549,3 +1549,63 @@ textarea:focus-visible {
         padding: 6px 0;
     }
 }
+
+/* ===== MOBILE HERO OPTIMIZATION ===== */
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 10px;
+        gap: 30px;
+        text-align: center;
+        /* Ensure it fits nicely */
+        padding-bottom: 40px;
+    }
+
+    /* Stack order if needed, but default grid stacks usually.
+       If grid isn't stacking? Check grid definition.
+       .hero is grid-template-columns: 1.1fr 0.9fr;
+       I need to make it 1fr on mobile.
+    */
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    h2::after {
+        margin: 10px auto 0;
+        width: 50px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .hero-avatar {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+    }
+
+    /* Adjust button container */
+    div[style*="margin-top:34px"] {
+        margin-top: 25px !important;
+        justify-content: center;
+    }
+
+    .socials {
+        justify-content: center;
+        margin-top: 30px;
+        /* Optional spacing adjustment */
+    }
+}
