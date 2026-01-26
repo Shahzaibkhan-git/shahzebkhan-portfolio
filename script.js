@@ -84,12 +84,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ===== STICKY HEADER SCROLL EFFECT =====
     const header = document.querySelector('header');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
 
     function handleHeaderScroll() {
-        if (window.scrollY > 20) {
+        const currentScrollY = window.scrollY;
+        const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+
+        if (currentScrollY > 20) {
             header?.classList.add('scrolled');
         } else {
             header?.classList.remove('scrolled');
+        }
+
+        // Hide header when scrolling down, show when scrolling up
+        // Increased threshold for mobile to prevent half-visible state
+        if (scrollDifference > 10) {
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scrolling down
+                header?.classList.add('hidden');
+            } else if (currentScrollY < lastScrollY) {
+                // Scrolling up
+                header?.classList.remove('hidden');
+            }
+            lastScrollY = currentScrollY;
+        }
+
+        ticking = false;
+    }
+
+    function requestHeaderUpdate() {
+        if (!ticking) {
+            requestAnimationFrame(handleHeaderScroll);
+            ticking = true;
         }
     }
 
@@ -204,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const debouncedScroll = debounce(() => {
         updateScrollProgress();
         toggleBackToTop();
-        handleHeaderScroll();
+        requestHeaderUpdate();
         highlightActiveNav();
     }, 10);
 
@@ -262,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===== INITIAL CALLS =====
     updateScrollProgress();
     toggleBackToTop();
-    handleHeaderScroll();
+    requestHeaderUpdate();
     highlightActiveNav();
 });
 

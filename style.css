@@ -111,12 +111,17 @@ header {
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    will-change: transform;
 }
 
 header.scrolled {
     background: rgba(15, 15, 15, 0.75);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+header.hidden {
+    transform: translateY(-100%);
 }
 
 
@@ -1561,8 +1566,8 @@ header {
 /* ===== MOBILE HERO OPTIMIZATION ===== */
 @media (max-width: 768px) {
     header {
-        padding: 5px 15px 25px 15px;
-        /* Mobile Padding Override */
+        padding: 25px 15px 25px 15px;
+        /* Mobile Padding - increased top padding to contain icons */
     }
 
     /* Bottom padding increased to 25px */
