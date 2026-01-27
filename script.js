@@ -311,15 +311,19 @@ if (savedTheme) {
 // ===== MOBILE MENU TOGGLE =====
 function toggleMenu() {
     const nav = document.querySelector('.nav-center');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
     nav.classList.toggle('active');
+    menuBtn.classList.toggle('active');
 }
 
 // Close menu when clicking a link
 document.querySelectorAll('.nav-center a').forEach(link => {
     link.addEventListener('click', () => {
         const nav = document.querySelector('.nav-center');
+        const menuBtn = document.querySelector('.mobile-menu-btn');
         if (nav.classList.contains('active')) {
             nav.classList.remove('active');
+            menuBtn.classList.remove('active');
         }
     });
 });
