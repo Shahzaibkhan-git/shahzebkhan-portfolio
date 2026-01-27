@@ -1312,6 +1312,11 @@ footer {
     background: rgba(255, 255, 255, 0.05);
 }
 
+#services .item strong {
+    display: block;
+    margin-bottom: 12px;
+}
+
 [data-theme="light"] #projects .item,
 [data-theme="light"] #services .item {
     background: rgba(255, 255, 255, 0.9);
@@ -1475,6 +1480,10 @@ footer {
     #projects .list,
     #services .list {
         grid-template-columns: 1fr;
+    }
+
+    #services .item p {
+        text-align: center;
     }
 
     .scroll-reveal {
