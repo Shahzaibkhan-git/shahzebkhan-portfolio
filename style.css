@@ -1494,6 +1494,24 @@ textarea:focus-visible {
     height: 28px;
 }
 
+/* Show hamburger by default, hide X */
+.mobile-menu-btn .hamburger-icon {
+    display: block;
+}
+
+.mobile-menu-btn .close-icon {
+    display: none;
+}
+
+/* When active, hide hamburger and show X */
+.mobile-menu-btn.active .hamburger-icon {
+    display: none;
+}
+
+.mobile-menu-btn.active .close-icon {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: flex;
