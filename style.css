@@ -579,7 +579,22 @@ body[data-theme="light"] .hero-avatar::before {
 /* mobile */
 @media (max-width: 768px) {
     .experience-timeline {
+        padding-left: 25px;
+    }
+
+    .experience-timeline::before {
+        left: 8px;
+    }
+
+    .experience-item {
         padding-left: 30px;
+    }
+
+    .timeline-dot {
+        left: -16px;
+        top: 20px;
+        width: 14px;
+        height: 14px;
     }
 
     .experience-header-row {
@@ -590,6 +605,10 @@ body[data-theme="light"] .hero-avatar::before {
 
     .experience-date-container {
         text-align: left;
+    }
+
+    .experience-card {
+        padding: 20px;
     }
 }
 
