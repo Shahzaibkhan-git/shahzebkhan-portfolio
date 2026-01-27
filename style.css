@@ -721,6 +721,11 @@ body[data-theme="light"] .hero-avatar::before {
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
+
+    .contact-card p {
+        margin: 0;
+        line-height: 1.4;
+    }
 }
 
 .item {
