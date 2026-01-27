@@ -1317,6 +1317,11 @@ footer {
     margin-bottom: 12px;
 }
 
+#projects .item strong {
+    display: block;
+    margin-bottom: 12px;
+}
+
 [data-theme="light"] #projects .item,
 [data-theme="light"] #services .item {
     background: rgba(255, 255, 255, 0.9);
@@ -1483,6 +1488,18 @@ footer {
     }
 
     #services .item p {
+        text-align: center;
+    }
+
+    #services .item strong {
+        text-align: center;
+    }
+
+    #projects .item p {
+        text-align: center;
+    }
+
+    #projects .item strong {
         text-align: center;
     }
 
