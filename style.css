@@ -1634,6 +1634,15 @@ header {
         margin-bottom: 25px;
     }
 
+    /* Reduce spacing between sections on mobile */
+    .section {
+        margin-bottom: 50px;
+    }
+
+    #about {
+        padding-top: 30px;
+    }
+
     .hero-avatar {
         width: 180px;
         height: 180px;
