@@ -1849,6 +1849,13 @@ header {
         gap: 20px;
         text-align: center;
         padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Move image to top */
+    .hero-right {
+        order: -1;
     }
 
     /* Stack order if needed, but default grid stacks usually.
