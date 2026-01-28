@@ -327,3 +327,12 @@ document.querySelectorAll('.nav-center a').forEach(link => {
         }
     });
 });
+
+// ===== TECH STACK DROPDOWN TOGGLE (Mobile Only) =====
+function toggleStack(header) {
+    // Only toggle on mobile
+    if (window.innerWidth <= 768) {
+        const stackGroup = header.parentElement;
+        stackGroup.classList.toggle('active');
+    }
+}

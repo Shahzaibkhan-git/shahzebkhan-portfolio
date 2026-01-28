@@ -272,6 +272,7 @@
           <h3>⚙️ Tech Stack</h3>
 
           <div class="stack-group">
+            <!-- Desktop: Title + Tags -->
             <span>Backend</span>
             <div class="stack-tags">
               <span>Python</span>
@@ -283,9 +284,28 @@
               <span>SSE</span>
               <span>WebSockets</span>
             </div>
+            <!-- Mobile: Dropdown Header + Content -->
+            <div class="stack-header" onclick="toggleStack(this)">
+              <span>Backend</span>
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <ul class="stack-content">
+              <li>Python</li>
+              <li>Django</li>
+              <li>Django REST Framework</li>
+              <li>REST APIs</li>
+              <li>Authentication</li>
+              <li>RBAC</li>
+              <li>SSE</li>
+              <li>WebSockets</li>
+            </ul>
           </div>
 
           <div class="stack-group">
+            <!-- Desktop: Title + Tags -->
             <span>Databases</span>
             <div class="stack-tags">
               <span>PostgreSQL</span>
@@ -293,9 +313,24 @@
               <span>SQLite</span>
               <span>Redis</span>
             </div>
+            <!-- Mobile: Dropdown Header + Content -->
+            <div class="stack-header" onclick="toggleStack(this)">
+              <span>Databases</span>
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <ul class="stack-content">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>SQLite</li>
+              <li>Redis</li>
+            </ul>
           </div>
 
           <div class="stack-group">
+            <!-- Desktop: Title + Tags -->
             <span>Tools & DevOps</span>
             <div class="stack-tags">
               <span>Docker</span>
@@ -304,6 +339,21 @@
               <span>Nginx</span>
               <span>Gunicorn</span>
             </div>
+            <!-- Mobile: Dropdown Header + Content -->
+            <div class="stack-header" onclick="toggleStack(this)">
+              <span>Tools & DevOps</span>
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <ul class="stack-content">
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Linux</li>
+              <li>Nginx</li>
+              <li>Gunicorn</li>
+            </ul>
           </div>
         </div>
       </div>
