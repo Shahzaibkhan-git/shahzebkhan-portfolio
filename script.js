@@ -9,26 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const target = document.getElementById("typewriter");
 
-    let index = 0;
-    let isDeleting = false;
+    if (target) {
+        let index = 0;
+        let isDeleting = false;
 
-    function typeLoop() {
-        if (!isDeleting) {
-            // Typing
-            if (index < text.length) {
-                target.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeLoop, typingSpeed);
-            } else {
-                // Pause after full text
-                setTimeout(() => {
-                    isDeleting = true;
-                    typeLoop();
-                }, pauseAfterType);
-            }
-        } else {
-            // Deleting
-            if (index > 0) {
+        const typeLoop = () => {
+            if (!isDeleting) {
+                // Typing
+                if (index < text.length) {
+                    target.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeLoop, typingSpeed);
+                } else {
+                    // Pause after full text
+                    setTimeout(() => {
+                        isDeleting = true;
+                        typeLoop();
+                    }, pauseAfterType);
+                }
+            } else if (index > 0) {
+                // Deleting
                 target.textContent = text.substring(0, index - 1);
                 index--;
                 setTimeout(typeLoop, deletingSpeed);
@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 isDeleting = false;
                 setTimeout(typeLoop, pauseAfterDelete);
             }
-        }
-    }
+        };
 
-    typeLoop();
+        typeLoop();
+    }
 
     // ===== PAGE LOADER =====
     const loader = document.querySelector('.page-loader');
@@ -54,24 +54,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===== SCROLL PROGRESS INDICATOR =====
     const scrollProgress = document.querySelector('.scroll-progress');
 
-    function updateScrollProgress() {
-        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (window.scrollY / windowHeight) * 100;
+    const updateScrollProgress = () => {
+        const { scrollHeight, clientHeight } = document.documentElement;
+        const { scrollY } = window;
+        const windowHeight = scrollHeight - clientHeight;
+        const scrolled = (scrollY / windowHeight) * 100;
         if (scrollProgress) {
             scrollProgress.style.width = scrolled + '%';
         }
-    }
+    };
 
     // ===== BACK TO TOP BUTTON =====
     const backToTop = document.querySelector('.back-to-top');
 
-    function toggleBackToTop() {
-        if (window.scrollY > 300) {
+    const toggleBackToTop = () => {
+        const { scrollY } = window;
+        if (scrollY > 300) {
             backToTop?.classList.add('visible');
         } else {
             backToTop?.classList.remove('visible');
         }
-    }
+    };
 
     if (backToTop) {
         backToTop.addEventListener('click', () => {
@@ -84,11 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ===== STICKY HEADER SCROLL EFFECT =====
     const header = document.querySelector('header');
-    let lastScrollY = window.scrollY;
+    let { scrollY: lastScrollY } = window;
     let ticking = false;
 
-    function handleHeaderScroll() {
-        const currentScrollY = window.scrollY;
+    const handleHeaderScroll = () => {
+        const { scrollY: currentScrollY } = window;
         const scrollDifference = Math.abs(currentScrollY - lastScrollY);
 
         if (currentScrollY > 20) {
@@ -103,21 +106,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
         ticking = false;
-    }
+    };
 
-    function requestHeaderUpdate() {
+    const requestHeaderUpdate = () => {
         if (!ticking) {
             requestAnimationFrame(handleHeaderScroll);
             ticking = true;
         }
-    }
+    };
 
     // ===== ACTIVE NAV LINK HIGHLIGHTING =====
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-center a');
 
-    function highlightActiveNav() {
-        const scrollY = window.scrollY;
+    const highlightActiveNav = () => {
+        const { scrollY } = window;
 
         sections.forEach(section => {
             const sectionHeight = section.offsetHeight;
@@ -143,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }
-    }
+    };
 
     // ===== SMOOTH SCROLL FOR NAV LINKS =====
     navLinks.forEach(link => {
@@ -204,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ===== DEBOUNCED SCROLL HANDLER =====
     let scrollTimeout;
-    function debounce(func, wait) {
+    const debounce = (func, wait) => {
         return function executedFunction(...args) {
             const later = () => {
                 clearTimeout(scrollTimeout);
@@ -213,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(later, wait);
         };
-    }
+    };
 
     const debouncedScroll = debounce(() => {
         updateScrollProgress();
@@ -223,9 +226,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 10);
 
     // Use requestAnimationFrame for smooth scroll updates
-    function onScroll() {
+    const onScroll = () => {
         debouncedScroll();
-    }
+    };
 
     window.addEventListener('scroll', onScroll);
 
@@ -281,17 +284,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ===== THEME TOGGLE =====
 function toggleTheme() {
-    document.body.dataset.theme =
-        document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    const { dataset } = document.body;
+    dataset.theme = dataset.theme === 'dark' ? 'light' : 'dark';
 
     // Optional: Save preference to localStorage
-    localStorage.setItem('theme', document.body.dataset.theme);
+    localStorage.setItem('theme', dataset.theme);
 }
 
 // Load saved theme preference
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
-    document.body.dataset.theme = savedTheme;
+    const { dataset } = document.body;
+    dataset.theme = savedTheme;
 }
 
 // ===== MOBILE MENU TOGGLE =====
