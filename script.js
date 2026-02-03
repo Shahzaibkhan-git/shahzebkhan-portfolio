@@ -97,18 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
             header?.classList.remove('scrolled');
         }
 
-        // Hide header when scrolling down, show when scrolling up
-        // Increased threshold for mobile to prevent half-visible state
-        if (scrollDifference > 10) {
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                // Scrolling down
-                header?.classList.add('hidden');
-            } else if (currentScrollY < lastScrollY) {
-                // Scrolling up
-                header?.classList.remove('hidden');
-            }
-            lastScrollY = currentScrollY;
-        }
+    // Keep header visible at all times (no hide-on-scroll behavior)
+    if (scrollDifference > 10) {
+        lastScrollY = currentScrollY;
+    }
 
         ticking = false;
     }
@@ -204,15 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(item);
     });
 
-    // ===== PARALLAX EFFECT FOR HERO AVATAR =====
+    // ===== HERO AVATAR (STATIC) =====
     const heroAvatar = document.querySelector('.hero-avatar');
-
-    function handleParallax() {
-        if (window.innerWidth > 768 && heroAvatar) {
-            const scrolled = window.scrollY;
-            const parallaxSpeed = 0.3;
-            heroAvatar.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-        }
+    if (heroAvatar) {
+        heroAvatar.style.transform = '';
     }
 
     // ===== DEBOUNCED SCROLL HANDLER =====
@@ -235,10 +222,9 @@ document.addEventListener("DOMContentLoaded", () => {
         highlightActiveNav();
     }, 10);
 
-    // Use requestAnimationFrame for smooth parallax
+    // Use requestAnimationFrame for smooth scroll updates
     function onScroll() {
         debouncedScroll();
-        requestAnimationFrame(handleParallax);
     }
 
     window.addEventListener('scroll', onScroll);
