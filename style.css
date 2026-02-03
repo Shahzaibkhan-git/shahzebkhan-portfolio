@@ -92,7 +92,7 @@ body {
 .container {
     max-width: 1200px;
     margin: auto;
-    padding: 50px 20px 60px;
+    padding: 0 20px 60px;
     background: var(--bg);
     animation: fadeIn 0.8s ease forwards;
 }
@@ -296,7 +296,7 @@ p {
 }
 
 .hero {
-    margin-top: 70px;
+    margin-top: 90px;
     /* push hero clearly below navbar */
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -1936,14 +1936,14 @@ textarea:focus-visible {
    User edited global header padding previously. I will edit global.
 */
 header {
-    padding: 20px 30px;
+    padding: 28px 30px;
     /* Restored Desktop Padding */
 }
 
 /* ===== MOBILE HERO OPTIMIZATION ===== */
 @media (max-width: 768px) {
     header {
-        padding: 25px 15px 25px 15px;
+        padding: 30px 15px 30px 15px;
         /* Mobile Padding - increased top padding to contain icons */
     }
 
@@ -1955,7 +1955,7 @@ header {
 /* ===== MOBILE HERO OPTIMIZATION ===== */
 @media (max-width: 768px) {
     .hero {
-        margin-top: 35px;
+        margin-top: 50px;
         /* Pushed down */
         gap: 20px;
         text-align: center;
