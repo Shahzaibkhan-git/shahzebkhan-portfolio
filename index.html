@@ -92,6 +92,7 @@
 
 
   <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 
@@ -156,7 +157,7 @@
       </button>
     </header>
 
-    <section class="section hero">
+    <section class="section hero" data-aos="fade-in">
       <div>
         <div class="hero-intro">
           <span>HI, I'M</span>
@@ -208,7 +209,7 @@
     </section>
 
     <section id="about" class="section">
-      <h2>About Me</h2>
+      <h2 data-aos="fade-down" data-aos-once="true">About Me</h2>
 
       <div class="about-grid">
         <!-- LEFT SIDE -->
@@ -357,12 +358,12 @@
 
 
     <section id="experience" class="section">
-      <h2>Experience</h2>
+      <h2 data-aos="fade-down" data-aos-once="true">Experience</h2>
 
       <div class="experience-timeline">
 
         <!-- Full-Time Backend Developer -->
-        <div class="experience-item">
+        <div class="experience-item" data-aos="fade-right">
           <span class="timeline-dot active"></span>
 
           <div class="experience-card">
@@ -389,7 +390,7 @@
         </div>
 
         <!-- Probation Period -->
-        <div class="experience-item">
+        <div class="experience-item" data-aos="fade-right" data-aos-delay="100">
           <span class="timeline-dot"></span>
 
           <div class="experience-card">
@@ -415,7 +416,7 @@
         </div>
 
         <!-- Internship -->
-        <div class="experience-item">
+        <div class="experience-item" data-aos="fade-right" data-aos-delay="200">
           <span class="timeline-dot"></span>
 
           <div class="experience-card">
@@ -446,9 +447,9 @@
 
 
     <section id="services" class="section">
-      <h2>Services</h2>
+      <h2 data-aos="fade-down" data-aos-once="true">Services</h2>
       <div class="list">
-        <div class="item">
+        <div class="item" data-aos="fade-up">
           <strong>Django Backend Development</strong>
           <p>
             Design and development of secure, scalable Django applications including REST APIs, authentication systems,
@@ -458,7 +459,7 @@
             Experience with Django REST Framework, JWT authentication, role-based access control, and API documentation.
           </p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up" data-aos-delay="100">
           <strong>ORM & Data Modeling</strong>
           <p>
             Build clean, maintainable Django ORM models with clear relationships, constraints, and reusable query
@@ -468,7 +469,7 @@
             Focused on efficient querysets, select/prefetch optimization, and consistent data access layers.
           </p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up" data-aos-delay="200">
           <strong>Real-Time & Background Systems</strong>
           <p>
             Implementation of real-time features using WebSockets and Server-Sent Events (SSE).
@@ -499,9 +500,9 @@
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <h2 data-aos="fade-down" data-aos-once="true">Projects</h2>
       <div class="list">
-        <div class="item">
+        <div class="item" data-aos="zoom-in-up">
           <strong>B2C Clothing E-Commerce Platform</strong>
           <p>
             Backend developer for a custom clothing e-commerce website, building scalable APIs for catalog, orders, customers, and admin workflows.
@@ -650,6 +651,15 @@
 
   </div>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000,
+      easing: 'ease-out-cubic',
+      once: false,
+      offset: 120,
+    });
+  </script>
   <script src="script.js"></script>
 
 </body>

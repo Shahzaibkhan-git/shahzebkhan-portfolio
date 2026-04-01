@@ -1,24 +1,27 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     // ===== TYPEWRITER EFFECT =====
-    const text = "Software Engineer";
-    const typingSpeed = 120;
-    const deletingSpeed = 120;
-    const pauseAfterType = 1200;
-    const pauseAfterDelete = 200;
+    const texts = ["Backend Software Engineer", "Django Expert", "API Developer", "Observability Engineer"];
+    const typingSpeed = 100;
+    const deletingSpeed = 60;
+    const pauseAfterType = 2000;
+    const pauseAfterDelete = 500;
 
     const target = document.getElementById("typewriter");
 
     if (target) {
-        let index = 0;
+        let textIndex = 0;
+        let charIndex = 0;
         let isDeleting = false;
 
         const typeLoop = () => {
+            const currentText = texts[textIndex];
+            
             if (!isDeleting) {
                 // Typing
-                if (index < text.length) {
-                    target.textContent += text.charAt(index);
-                    index++;
+                if (charIndex < currentText.length) {
+                    target.textContent += currentText.charAt(charIndex);
+                    charIndex++;
                     setTimeout(typeLoop, typingSpeed);
                 } else {
                     // Pause after full text
@@ -27,14 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         typeLoop();
                     }, pauseAfterType);
                 }
-            } else if (index > 0) {
+            } else if (charIndex > 0) {
                 // Deleting
-                target.textContent = text.substring(0, index - 1);
-                index--;
+                target.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
                 setTimeout(typeLoop, deletingSpeed);
             } else {
-                // Pause before re-typing
+                // Pause before re-typing next word
                 isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
                 setTimeout(typeLoop, pauseAfterDelete);
             }
         };
@@ -174,30 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ===== INTERSECTION OBSERVER FOR SCROLL ANIMATIONS =====
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-            }
-        });
-    }, observerOptions);
-
-    // Observe sections
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.add('scroll-reveal');
-        observer.observe(section);
-    });
-
-    // Observe list items with stagger effect
-    document.querySelectorAll('.list .item').forEach(item => {
-        observer.observe(item);
-    });
 
     // ===== HERO AVATAR (STATIC) =====
     const heroAvatar = document.querySelector('.hero-avatar');
